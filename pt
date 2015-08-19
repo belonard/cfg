@@ -1,0 +1,20 @@
+alias none		""
+alias strength	"none"
+alias intel		"one"
+alias agility	"two"
+
+alias cycle "c1"
+alias c1	"alias strength none; alias intel 	one; alias agility 	two; alias cycle c2; scmd"
+alias c2	"alias intel	none; alias agility	one; alias strength	two; alias cycle c3; scmd"
+alias c3	"alias agility	none; alias strength	one; alias intel	two; alias cycle c1; scmd"
+//by belonard 08.08.2015
+
+alias one	"scmd"
+alias two	"scmd; scmd"
+
+alias scmd	"dota_item_execute 0"
+
+bind 1 		"cycle"
+bind p		"strength	; alias strength 	none; alias intel 		one; alias agility 	two; alias cycle c2"
+bind [		"intel		; alias intel	 	none; alias agility 	one; alias strength	two; alias cycle c3"
+bind ]		"agility	; alias agility		none; alias strength 	one; alias intel 	two; alias cycle c1"
